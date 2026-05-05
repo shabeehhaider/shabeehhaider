@@ -7,7 +7,7 @@
       <div class="absolute inset-0 opacity-[0.03]" style="background-image: linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px); background-size: 64px 64px;"></div>
     </div>
 
-    <div class="section-container relative z-10 pt-24 sm:pt-32 pb-16 sm:pb-20">
+    <div class="section-container relative z-10 pt-24 sm:pt-32 pb-24 sm:pb-28">
       <div class="max-w-4xl">
         <!-- Status Badge -->
         <div class="inline-flex items-center gap-2 glass rounded-full px-3 sm:px-4 py-2 mb-6 sm:mb-8 animate-fade-in">
