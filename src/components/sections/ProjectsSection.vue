@@ -76,7 +76,7 @@ const projects = [
     githubUrl: '#',
     status: 'Production',
     featured: true,
-    association: 'Jami Partners'
+    association: 'Jami Partners · Newera.ai'
   },
   {
     id: 2,
