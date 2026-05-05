@@ -2,7 +2,7 @@
   <div>
     <Navbar />
 
-    <main>
+    <main id="main-content" role="main" aria-label="Portfolio content">
       <HeroSection />
       <AboutSection />
       <ProjectsSection />

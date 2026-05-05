@@ -1,5 +1,5 @@
 <template>
-  <section id="projects" class="section-padding relative overflow-hidden">
+  <section id="projects" aria-label="Projects" class="section-padding relative overflow-hidden">
     <!-- Background -->
     <div class="absolute inset-0 pointer-events-none">
       <div class="absolute top-0 left-0 w-[600px] h-[600px] bg-gradient-radial from-indigo-600/8 to-transparent blur-3xl"></div>

@@ -1,5 +1,5 @@
 <template>
-  <section id="contact" class="section-padding relative overflow-hidden">
+  <section id="contact" aria-label="Contact" class="section-padding relative overflow-hidden">
     <!-- Background glow -->
     <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-gradient-radial from-indigo-600/15 via-violet-600/8 to-transparent blur-3xl pointer-events-none"></div>
     <div class="absolute inset-0 pointer-events-none" style="background-image: linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px); background-size: 64px 64px;"></div>

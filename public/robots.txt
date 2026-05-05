@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://shabeeh.dev/sitemap.xml
+
+# Block common non-content paths
+Disallow: /dist/

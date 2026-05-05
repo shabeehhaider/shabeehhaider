@@ -1,5 +1,5 @@
 <template>
-  <section id="hero" class="relative min-h-screen flex items-center overflow-hidden">
+  <section id="hero" aria-label="Introduction" class="relative min-h-screen flex items-center overflow-hidden">
     <!-- Background Effects -->
     <div class="absolute inset-0 pointer-events-none">
       <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-gradient-radial from-indigo-600/20 via-violet-600/10 to-transparent blur-3xl"></div>

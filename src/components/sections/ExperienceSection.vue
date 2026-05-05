@@ -1,5 +1,5 @@
 <template>
-  <section id="experience" class="section-padding relative overflow-hidden">
+  <section id="experience" aria-label="Work experience" class="section-padding relative overflow-hidden">
     <div class="absolute top-1/2 right-0 w-[400px] h-[600px] bg-gradient-radial from-indigo-600/8 to-transparent blur-3xl pointer-events-none"></div>
 
     <div class="section-container relative z-10">
