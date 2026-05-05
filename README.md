@@ -76,36 +76,35 @@ I'm a **Senior Front-End Developer** based in 🇵🇰 Karachi with **4+ years**
       </p>
     </td>
     <td width="50%" valign="top">
-      <h4>📊 Analytics Dashboard</h4>
-      <p>Modular dashboard with interactive charts, advanced filtering, and a scalable component system.</p>
+      <h4>📊 Traderverse — Analytics Dashboard</h4>
+      <p>Trading analytics platform with interactive charts, advanced filtering, and a scalable, modular UI.</p>
       <p>
         <code>React</code> <code>Charts</code> <code>REST API</code>
       </p>
       <p>
-        <em>🔒 Demo available on request</em>
+        <a href="https://traderverse.io/">🔗 Live Demo</a>
       </p>
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <h4>🎬 Media / Content Platform</h4>
-      <p>Category-based content platform with search, filtering, and a fast, responsive UI.</p>
+      <h4>👤 Moiz Zaidi — Personal Portfolio</h4>
+      <p>Clean, fast personal portfolio with smooth transitions and a focused content layout.</p>
       <p>
-        <code>Vue.js</code> <code>Composition API</code>
+        <code>Vue.js</code> <code>Composition API</code> <code>Tailwind</code>
       </p>
       <p>
-        <em>🔒 Demo available on request</em>
+        <a href="https://www.moizzaidi.com/">🔗 Live Demo</a>
       </p>
     </td>
     <td width="50%" valign="top">
-      <h4>📅 BookMyEvent</h4>
-      <p>Event management platform with admin panel — built with Vue, TypeScript, and a clean modular UI.</p>
+      <h4>🛍️ Trendbell — E-Commerce</h4>
+      <p>Category-based e-commerce storefront with search, filtering, and a polished, responsive UI.</p>
       <p>
-        <code>Vue</code> <code>TypeScript</code>
+        <code>Vue.js</code> <code>Tailwind</code> <code>E-Commerce</code>
       </p>
       <p>
-        <a href="https://github.com/shabeehhaider/bookMyEvent">📁 Repo</a> ·
-        <a href="https://github.com/shabeehhaider/bookMyEventAdmin">📁 Admin</a>
+        <a href="https://trendbell.pk/">🔗 Live Demo</a>
       </p>
     </td>
   </tr>
