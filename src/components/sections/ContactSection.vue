@@ -165,7 +165,7 @@ import { ref, reactive } from 'vue'
 import emailjs from '@emailjs/browser'
 
 // ─── Replace these three values with your EmailJS credentials ───
-const EMAILJS_SERVICE_ID  = 'service_xlxdk0s'
+const EMAILJS_SERVICE_ID  = 'service_d8ljiks'
 const EMAILJS_TEMPLATE_ID = 'template_gp0r2va'
 const EMAILJS_PUBLIC_KEY  = '2Fwx-Wg3KGL9pXE84'
 // ────────────────────────────────────────────────────────────────
@@ -190,11 +190,10 @@ const handleSubmit = async () => {
       EMAILJS_SERVICE_ID,
       EMAILJS_TEMPLATE_ID,
       {
-        from_name:    form.name,
-        from_email:   form.email,
-        subject:      form.subject || 'Portfolio Contact',
-        message:      form.message,
-        reply_to:     form.email,
+        name:    form.name,
+        email:   form.email,
+        title:   form.subject || 'Portfolio Contact',
+        message: form.message,
       },
       EMAILJS_PUBLIC_KEY
     )
