@@ -36,7 +36,7 @@ A modern, responsive portfolio website with video integration and clean UI.
 - 📱 Fully responsive design  
 - ⚡ Optimized performance  
 
-🔗 Live Demo: https://your-live-link.com  
+🔗 Live Demo: https://www.drasifzaidi1.com/  
 
 ---
 
