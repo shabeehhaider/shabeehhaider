@@ -21,9 +21,9 @@
         </p>
       </div>
 
-      <div class="grid md:grid-cols-5 gap-8 items-start max-w-4xl mx-auto">
+      <div class="grid md:grid-cols-5 gap-6 sm:gap-8 items-start max-w-4xl mx-auto">
         <!-- Contact Info -->
-        <div class="md:col-span-2 space-y-4 reveal-left">
+        <div class="md:col-span-2 space-y-3 sm:space-y-4 reveal">
           <div
             v-for="info in contactInfo"
             :key="info.label"
@@ -62,8 +62,8 @@
         </div>
 
         <!-- Contact Form -->
-        <div class="md:col-span-3 reveal-right">
-          <div class="glass rounded-2xl p-8">
+        <div class="md:col-span-3 reveal">
+          <div class="glass rounded-2xl p-4 sm:p-6 md:p-8">
             <Transition name="form-success" mode="out-in">
               <!-- Success state -->
               <div v-if="submitted" key="success" class="text-center py-12">

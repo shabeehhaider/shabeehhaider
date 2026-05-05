@@ -1,6 +1,5 @@
 <template>
   <section id="skills" class="section-padding relative overflow-hidden">
-    <!-- Background -->
     <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[700px] h-[400px] bg-gradient-radial from-violet-600/10 to-transparent blur-3xl pointer-events-none"></div>
 
     <div class="section-container relative z-10">
@@ -11,17 +10,16 @@
         </template>
       </SectionTitle>
 
-      <!-- Main skills categories -->
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+      <!-- Skill category cards -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-10 sm:mb-12">
         <div
           v-for="(category, i) in skillCategories"
           :key="category.name"
-          class="glass-hover rounded-2xl p-6 reveal"
-          :style="{ transitionDelay: `${i * 100}ms` }"
+          class="glass-hover rounded-2xl p-4 sm:p-6 reveal"
+          :style="{ transitionDelay: `${i * 80}ms` }"
         >
-          <!-- Category header -->
-          <div class="flex items-center gap-3 mb-6">
-            <div :class="['w-10 h-10 rounded-xl flex items-center justify-center text-xl', category.iconBg]">
+          <div class="flex items-center gap-3 mb-4 sm:mb-6">
+            <div :class="['w-9 h-9 sm:w-10 sm:h-10 rounded-xl flex items-center justify-center text-lg sm:text-xl shrink-0', category.iconBg]">
               {{ category.icon }}
             </div>
             <div>
@@ -30,9 +28,8 @@
             </div>
           </div>
 
-          <!-- Skills with proficiency bars -->
-          <div class="space-y-4">
-            <div v-for="skill in category.skills" :key="skill.name" class="group">
+          <div class="space-y-3 sm:space-y-4">
+            <div v-for="skill in category.skills" :key="skill.name">
               <div class="flex items-center justify-between mb-1.5">
                 <span class="text-xs font-medium" style="color: var(--text-secondary)">{{ skill.name }}</span>
                 <span class="text-xs font-mono" :style="{ color: category.color }">{{ skill.level }}%</span>
@@ -43,7 +40,7 @@
                   :style="{
                     width: animated ? `${skill.level}%` : '0%',
                     background: category.gradient,
-                    transitionDelay: `${i * 100 + 200}ms`
+                    transitionDelay: `${i * 80 + 200}ms`
                   }"
                 ></div>
               </div>
@@ -52,20 +49,20 @@
         </div>
       </div>
 
-      <!-- Tools & Tech logos grid -->
+      <!-- Tools grid -->
       <div class="reveal">
-        <div class="flex items-center gap-3 mb-6">
-          <span class="text-xs font-semibold uppercase tracking-widest" style="color: var(--text-muted)">Tools & Technologies</span>
+        <div class="flex items-center gap-3 mb-4 sm:mb-6">
+          <span class="text-xs font-semibold uppercase tracking-widest whitespace-nowrap" style="color: var(--text-muted)">Tools & Technologies</span>
           <div class="h-px flex-1 bg-gradient-to-r from-white/10 to-transparent"></div>
         </div>
-        <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-3">
+        <div class="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 gap-2 sm:gap-3">
           <div
             v-for="tool in tools"
             :key="tool.name"
-            class="glass-hover rounded-xl p-3 flex flex-col items-center gap-2 group"
+            class="glass-hover rounded-xl p-2 sm:p-3 flex flex-col items-center gap-1 sm:gap-2 group"
           >
-            <span class="text-2xl group-hover:scale-125 transition-transform duration-200">{{ tool.icon }}</span>
-            <span class="text-xs text-center font-medium" style="color: var(--text-muted)">{{ tool.name }}</span>
+            <span class="text-xl sm:text-2xl group-hover:scale-125 transition-transform duration-200">{{ tool.icon }}</span>
+            <span class="text-xs text-center font-medium leading-tight" style="color: var(--text-muted)">{{ tool.name }}</span>
           </div>
         </div>
       </div>
@@ -87,9 +84,8 @@ onMounted(() => {
         observer.disconnect()
       }
     },
-    { threshold: 0.2 }
+    { threshold: 0.1 }
   )
-
   const section = document.getElementById('skills')
   if (section) observer.observe(section)
 })
