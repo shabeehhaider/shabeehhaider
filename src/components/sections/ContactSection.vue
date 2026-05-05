@@ -135,6 +135,8 @@
                   ></textarea>
                 </div>
 
+                <p v-if="errorMsg" class="text-sm text-rose-400 text-center -mb-1">{{ errorMsg }}</p>
+
                 <button
                   type="submit"
                   :disabled="loading"
@@ -160,9 +162,17 @@
 
 <script setup>
 import { ref, reactive } from 'vue'
+import emailjs from '@emailjs/browser'
+
+// ─── Replace these three values with your EmailJS credentials ───
+const EMAILJS_SERVICE_ID  = 'service_xlxdk0s'
+const EMAILJS_TEMPLATE_ID = 'template_gp0r2va'
+const EMAILJS_PUBLIC_KEY  = '2Fwx-Wg3KGL9pXE84'
+// ────────────────────────────────────────────────────────────────
 
 const submitted = ref(false)
 const loading = ref(false)
+const errorMsg = ref('')
 
 const form = reactive({
   name: '',
@@ -173,11 +183,28 @@ const form = reactive({
 
 const handleSubmit = async () => {
   loading.value = true
-  // Simulate API call
-  await new Promise(resolve => setTimeout(resolve, 1500))
-  loading.value = false
-  submitted.value = true
-  Object.assign(form, { name: '', email: '', subject: '', message: '' })
+  errorMsg.value = ''
+
+  try {
+    await emailjs.send(
+      EMAILJS_SERVICE_ID,
+      EMAILJS_TEMPLATE_ID,
+      {
+        from_name:    form.name,
+        from_email:   form.email,
+        subject:      form.subject || 'Portfolio Contact',
+        message:      form.message,
+        reply_to:     form.email,
+      },
+      EMAILJS_PUBLIC_KEY
+    )
+    submitted.value = true
+    Object.assign(form, { name: '', email: '', subject: '', message: '' })
+  } catch (err) {
+    errorMsg.value = 'Something went wrong. Please try emailing me directly.'
+  } finally {
+    loading.value = false
+  }
 }
 
 const contactInfo = [
